@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&family=Inter&display=swap');
+*{
+  margin: 0;
+  box-sizing: border-box;
+  font-weight: 700;
+  font-size: 12px;
+  font-family: 'Roboto';
+
+}
+body {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin: 0;
+  height: 100vh;
+  margin-left: -10px;
+
+letter-spacing: 0.155em;
+line-height: 14px;
+}
+.compo{
+  display: flex;
+  
+  
+  /* flex-direction: column;   */
+}
+.form{
+  /* margin-top: 10px; */
+  margin-left: 280px;
+  /* background: red; */
+  width:40%;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 200px;
+}
+::placeholder { 
+  color: #BBB9BC;
+  letter-spacing:1.5px;
+  padding: 10px;
+
+}
+
+.cards{
+  margin-bottom: 20px;
+  margin-left: 60px;
+  width: 382px;
+  height: 44px;
+}
+
+.cardss{
+  margin-left: 60px;
+}
+
+#startD{
+  display: flex;
+  margin-left: 56px;
+}
+
+.sub{
+  border-radius: 6px;
+  margin-top: 50px;
+  margin-left: 55px;
+  /* padding-top: 8px;
+  padding-bottom: 10px;
+  padding-left: 80px;
+  padding-right: 80px; */
+  background: #220930;
+  color:white;
+  border: none;
+  cursor: pointer;
+  width: 382px;
+height: 53px;
+letter-spacing: 2px;
+
+}
+p{
+  color: #404040;
+  margin-bottom: 10px;
+}
+input{
+   border: 1px solid rgba(0, 0, 0, 0.13);;
+  border-radius: 6px;
+
+}
+label{
+  /* display: flex; */
+  color: #F81212;
+
+  font-family: 'Inter';
+  margin-left: 50px;
+  padding-top: 50px;
+}
+
+.in_my{
+  width: 78px;
+height: 44px;
+margin-right: 10px;
+}
+
+#cvc{
+  width: 189px;
+height: 44px;
+margin-left: 18px;
+}
+.cvc_p{
+  margin-left: 18px;
+}

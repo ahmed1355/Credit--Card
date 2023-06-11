@@ -1,8 +1,12 @@
-import React from 'react'
-import './App.css'
+import React from "react";
+import CardForm from "./cardForm.js";
 
-export default function App() {
+function App() {
   return (
-    <div>App</div>
-  )
+    <div>
+      <CardForm />
+    </div>
+  );
 }
+
+export default App;
