@@ -1,8 +1,7 @@
 {
-  "name": "credit-card-generator",
+  "name": "prod",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://ahmed1355.github.io/Credit-Card-Generator",  
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -35,8 +34,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
   }
 }
