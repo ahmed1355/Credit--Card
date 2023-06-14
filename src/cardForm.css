@@ -23,15 +23,11 @@ line-height: 14px;
   display: flex;
   
   
-  /* flex-direction: column;   */
 }
 .form{
-  /* margin-top: 10px; */
   margin-left: 280px;
-  /* background: red; */
   width:40%;
   display: flex;
-  /* flex-direction: column; */
   justify-content: space-between;
   align-items: center;
   margin-bottom: 200px;
@@ -58,15 +54,17 @@ line-height: 14px;
   display: flex;
   margin-left: 56px;
 }
-
+#startD label{
+  position: relative;
+  right : 55px;
+  top: 10px;
+  line-height: 17px;
+}
 .sub{
   border-radius: 6px;
   margin-top: 50px;
   margin-left: 55px;
-  /* padding-top: 8px;
-  padding-bottom: 10px;
-  padding-left: 80px;
-  padding-right: 80px; */
+
   background: #220930;
   color:white;
   border: none;
@@ -86,12 +84,18 @@ input{
 
 }
 label{
-  /* display: flex; */
+  display: flex;
   color: #F81212;
 
-  font-family: 'Inter';
-  margin-left: 50px;
-  padding-top: 50px;
+  font-size: 12px;
+   font-family: 'Inter';
+   margin-left: 60px; 
+   margin-bottom: 15px;
+}
+
+.cvc_error_label{
+  margin-top: 20px;  
+  text-align: center;
 }
 
 .in_my{
@@ -107,4 +111,12 @@ margin-left: 18px;
 }
 .cvc_p{
   margin-left: 18px;
+}
+
+
+.success-message{
+  margin-top: 30px;
+  text-align: center;
+  font-size: 14px;
+
 }

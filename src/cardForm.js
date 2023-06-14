@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./cardForm.css";
 import logo from "./assets/Group 2.png";
+import CreditCard from "./creditCard";
 
 function CardForm() {
   const [cardHolderName, setCardHolderName] = useState("");
@@ -9,16 +10,25 @@ function CardForm() {
   const [expiryMonth, setExpiryMonth] = useState("");
   const [cvc, setCvc] = useState("");
   const [error, setError] = useState(false);
+  const [successMessage, setSuccessMessage] = useState("");
+  const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (
       cardHolderName.trim().length === 0 ||
       cardNumber.trim().length === 0 ||
+      cvc.trim().length === 0 ||
       (cvc.length > 0 && !/^\d+$/.test(cvc))
     ) {
       setError(true);
+      return;
     }
+
+    setSuccessMessage("Form submitted successfully!");
+    setTimeout(() => {
+      setSuccessMessage("");
+    }, 2000);
 
     if (cardHolderName && cardNumber && expiryDate && expiryMonth && cvc) {
       console.log(
@@ -33,6 +43,7 @@ function CardForm() {
         "CVC:",
         cvc
       );
+      setSubmitted(true);
     }
   };
 
@@ -66,7 +77,10 @@ function CardForm() {
               placeholder="eg 1234 5678 9123 0000"
               maxLength={19}
               onChange={handleCardNumberChange}
-              value={cardNumber}
+              value={cardNumber
+                .replace(/\s/g, "")
+                .replace(/(\d{4})/g, "$1 ")
+                .trim()}
               className="cards"
               id="Cno"
             />
@@ -82,10 +96,13 @@ function CardForm() {
                 placeholder="MM"
                 maxLength={2}
                 onChange={(e) => setExpiryDate(e.target.value)}
-                required
+                // required
                 className="in_my"
                 id="Cdate"
               />
+                {error && expiryDate.length === 0 ? (
+              <label className="Cdate_label">expiry Date required</label>
+            ) : null}
             </div>
             <div>
               <p> (MM/YY)</p>
@@ -93,10 +110,13 @@ function CardForm() {
                 placeholder="YY"
                 maxLength={2}
                 onChange={(e) => setExpiryMonth(e.target.value)}
-                required
+                // required
                 className="in_my"
                 id="Cyear"
               />
+                 {error && expiryMonth.length === 0 ? (
+              <label className="Cyear_label">expiry Month required</label>
+            ) : null}
             </div>
 
             <div>
@@ -108,17 +128,31 @@ function CardForm() {
                 id="cvc"
               />
               {error && cvc.length === 0 ? (
-                <label>CVC must be provided</label>
+                <label className="cvc_cond">CVC must be provided</label>
               ) : null}
               {error && cvc.length > 0 && !/^\d+$/.test(cvc) ? (
-                <label>CVC must be numeric</label>
+                <label className="cvc_error_label">CVC must be numeric</label>
               ) : null}
             </div>
           </section>
 
+          {successMessage && (
+            <div className="success-message">{successMessage}</div>
+          )}
+
           <button className="sub">Confirm</button>
         </form>
       </div>
+
+      {submitted && (
+        <CreditCard
+          cardHolderName={cardHolderName}
+          cardNumber={cardNumber}
+          expiryDate={expiryDate}
+          expiryMonth={expiryMonth}
+          cvc={cvc}
+        />
+      )}
     </div>
   );
 }

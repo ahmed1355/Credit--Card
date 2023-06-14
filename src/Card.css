@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&family=Inter&display=swap');
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+.front {
+  position: absolute;
+  top: 120px;
+  left: 190px;
+}
+.back {
+  position: absolute;
+  top: 400px;
+  left: 280px;
+}
+
+.cvcno {
+  color: white;
+  position: absolute;
+  top: 515px;
+  left:633px ;
+  font-size: 14px;
+  letter-spacing: 2.5px;
+  /* display: none;  */
+
+}
+.e_img{
+    position: absolute;
+    z-index: 1;
+    top: 150px;
+    left: 230px;
+    /* display: none; */
+}
+.selip{
+    margin-bottom: 9px;
+    margin-left: 17px;
+}
+
+.crd_no{
+  position: absolute;
+  top:280px;
+  left: 230px;
+  /* display: none; */
+ 
+}
+.crd_no p{
+  font-size: 26px;
+  color: white;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+
+}
+
+.c_details{
+  position: absolute;
+  top:330px;
+left: 230px;  
+/* display: none; */
+  
+}
+.c_name{
+  color: white;
+  font-size: 14px;
+  letter-spacing: 0.19em;
+  text-transform: uppercase;
+}
+.c_date{
+  margin-left: 185px;
+  font-size: 14px;
+  color: white;
+  letter-spacing: 0.235em;
+}
