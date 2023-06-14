@@ -101,7 +101,7 @@ function CardForm() {
                 id="Cdate"
               />
                 {error && expiryDate.length === 0 ? (
-              <label className="Cdate_label">expiry Date required</label>
+              <label className="Cdate_label">Expiry Date required</label>
             ) : null}
             </div>
             <div>
