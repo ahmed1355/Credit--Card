@@ -20,8 +20,8 @@ function CreditCard(props) {
         (
           <>
           <div className="e_img">
-          <img src={eclipse} className="elip" />
-          <img src={s_eclipse} className="selip" />
+          <img src={eclipse} alt="" className="elip" />
+          <img src={s_eclipse} alt="" className="selip" />
         </div>
             <div>
               <img src={BackCard} className="back" alt="logo" />
